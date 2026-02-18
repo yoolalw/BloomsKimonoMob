@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBEEF4"
+    tools:context=".ProductRegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarProduto"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#E8B4CD"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNomeKimono"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Kimono"
+        android:backgroundTint="#E8B4CD"
+        android:inputType="text"
+        android:padding="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbarProduto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/edtPrecoKimono"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Preço"
+        android:backgroundTint="#E8B4CD"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/edtNomeKimono"
+        app:layout_constraintStart_toStartOf="@id/edtNomeKimono"
+        app:layout_constraintEnd_toEndOf="@id/edtNomeKimono" />
+
+    <EditText
+        android:id="@+id/edtQtdKimono"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Quantidade"
+        android:backgroundTint="#E8B4CD"
+        android:inputType="number"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/edtPrecoKimono"
+        app:layout_constraintStart_toStartOf="@id/edtPrecoKimono"
+        app:layout_constraintEnd_toEndOf="@id/edtPrecoKimono" />
+
+    <Button
+        android:id="@+id/btnSelecionarImagem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Selecionar Imagem"
+        android:backgroundTint="#E8B4CD"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/edtQtdKimono"
+        app:layout_constraintStart_toStartOf="@id/edtQtdKimono"
+        app:layout_constraintEnd_toEndOf="@id/edtQtdKimono" />
+
+    <EditText
+        android:id="@+id/edtImagemKimono"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Imagem selecionada"
+        android:backgroundTint="#E8B4CD"
+        android:inputType="text"
+        android:enabled="false"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btnSelecionarImagem"
+        app:layout_constraintStart_toStartOf="@id/btnSelecionarImagem"
+        app:layout_constraintEnd_toEndOf="@id/btnSelecionarImagem" />
+
+    <Button
+        android:id="@+id/btnCadastrarProduto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:backgroundTint="#E8B4CD"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/edtImagemKimono"
+        app:layout_constraintStart_toStartOf="@id/edtImagemKimono"
+        app:layout_constraintEnd_toEndOf="@id/edtImagemKimono" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
