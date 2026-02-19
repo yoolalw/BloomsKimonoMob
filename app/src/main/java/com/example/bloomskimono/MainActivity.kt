@@ -13,6 +13,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import com.example.bloomskimono.R
+import android.content.Intent
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.example.bloomskimono.ProductRegisterActivity
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +27,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val btnAddProduto = findViewById<FloatingActionButton>(R.id.btnAddProduto)
+
+        btnAddProduto.setOnClickListener {
+            val intent = Intent(this, ProductRegisterActivity::class.java)
+            startActivity(intent)
+        }
 
         // Inicialização do RecyclerView
         recyclerView = findViewById(R.id.recyclerView)
